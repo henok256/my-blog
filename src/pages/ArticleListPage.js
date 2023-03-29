@@ -1,21 +1,13 @@
 import articles from "./article-content";
+import ArticlesList from "./components/ArticlesList";
 
- const ArticleListPage = () => {
+const ArticleListPage = () => {
   return (
     <>
-    <h1>Article List Page</h1>
-  {articles.map((article)=>(
-    <>
-       <h2>{article.name}</h2>
-       <p>{article.title}</p>
-       <p>{article.content}</p>
+      <h1>Articles</h1>
+       <ArticlesList articles={articles} />
     </>
-   
-    
- ))}
-    </>
-    
-  )
-}
+  );
+};
 
 export default ArticleListPage;
